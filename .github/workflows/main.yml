@@ -15,9 +15,8 @@ jobs:
       - name: echo values
         run: |
           echo ${{ github.event }}
-          echo ${{ github.payload }}
-          echo ${{ github.event.payload }}
-          echo ${{ github.event.commits }}
+          echo ${{ github.event.commit_id }}
+          echo ${{ github.commit_id }}
           echo ${{ github.ref }}
           echo ${{ github.actor }} 
           echo ${{ github.sha }}
