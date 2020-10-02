@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.payload }}
           echo ${{ github.repo }}
+          echo ${{ github.ref }}
           echo ${{ github.actor }} 
           echo ${{ github.sha }}
           echo ${{ github.event_name }}
