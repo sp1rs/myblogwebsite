@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.sha }}
+          echo ${{ github.event.client_payload }}
           echo ${{ github.event.repo.url }}
