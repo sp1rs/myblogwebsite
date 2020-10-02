@@ -1,0 +1,17 @@
+
+on:
+  pull_request:
+    branches: [ '*' ]
+
+jobs:
+  lint-and-test:
+    env:
+      DEMAND_PLANNER_ENV: testing
+
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: echo values
+        run: |
+          echo ${{ github.event }}
