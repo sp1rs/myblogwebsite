@@ -14,5 +14,6 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.event.client_payload }}
-          echo ${{ github.event.repo.url }}
+          echo ${{ github.event.client_payload.branch_name }}
+          echo ${{ github.sha }}
+          echo ${{ github.event_name }}
