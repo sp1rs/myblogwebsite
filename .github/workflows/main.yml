@@ -15,7 +15,7 @@ jobs:
       - name: echo values
         run: |
           echo ${{ github.event }}
-          echo ${{ github.event.commit_id }}
+          echo ${{ github.event.pull_request.base.sha }}
           echo ${{ github.commit_id }}
           echo ${{ github.ref }}
           echo ${{ github.actor }} 
