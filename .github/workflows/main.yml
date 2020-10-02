@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.event.repo }}
+          echo ${{ github.event.name }}
           echo ${{ github.event.repo.url }}
