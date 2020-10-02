@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.event.branch }}
-          echo ${{ github.event.branches }}
-          echo ${{ github.event.commit }} 
+          echo ${{ github.event.id }}
+          echo ${{ github.event.type }}
+          echo ${{ github.event.actor }} 
           echo ${{ github.sha }}
           echo ${{ github.event_name }}
