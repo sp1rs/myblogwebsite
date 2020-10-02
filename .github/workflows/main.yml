@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: echo values
         run: |
-          echo ${{ github.repo }}
+          echo ${{ github.head }}
+          echo ${{ github.before }}
+          echo ${{ github.commits }}
           echo ${{ github.ref }}
           echo ${{ github.actor }} 
           echo ${{ github.sha }}
