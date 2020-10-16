@@ -11,7 +11,7 @@ jobs:
     name: Deploy branch
     runs-on: ubuntu-latest
     env:
-      LATEST_COMMIT: ${{ github.event.push_request.head.sha }}
+      LATEST_COMMIT: ${{ github.event.push.after }}
     steps:
       - name: Configure job for push to master
         run: |
