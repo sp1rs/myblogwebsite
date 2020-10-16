@@ -11,9 +11,12 @@ jobs:
     name: Deploy branch
     runs-on: ubuntu-latest
     env:
-      LATEST_COMMIT: ${{ github.event.push }}
+      BEFORE_COMMIT: ${{ github.event.before }}
+      AFTER_COMMIT: ${{ github.event.after }}
     steps:
       - name: Configure job for push to master
         run: |
           echo "Shashank"
-          echo $LATEST_COMMIT
+          echo $BEFORE_COMMIT
+          echo $AFTER_COMMIT
+          
