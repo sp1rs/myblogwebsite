@@ -4,6 +4,4 @@ Test github actions.
 
 
 
-TEST 1
-TEST 2
-
+print("ADMIN 3")
