@@ -13,10 +13,12 @@ jobs:
     env:
       BEFORE_COMMIT: ${{ github.event.before }}
       AFTER_COMMIT: ${{ github.event.after }}
+      SHA: ${{ github.event.sha }}
     steps:
       - name: Configure job for push to master
         run: |
           echo "Shashank"
           echo $BEFORE_COMMIT
           echo $AFTER_COMMIT
+          echo $SHA
           
