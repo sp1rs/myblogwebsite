@@ -1,17 +1,19 @@
+name: Deploy
 
 on:
-  pull_request:
-    branches: [ '*' ]
+  push:
+    branches: [ master ]
+  repository_dispatch:
+    types: [ on-deploy-branch ]
 
 jobs:
-  lint-and-test:
-    env:
-      DEMAND_PLANNER_ENV: testing
-
-    name: Lint and Test
+  deploy-branch:
+    name: Deploy branch
     runs-on: ubuntu-latest
-    
+    env:
+      LATEST_COMMIT: ${{ github.event.push_request.head.sha }}
     steps:
-      - name: echo values
+      - name: Configure job for push to master
         run: |
-          echo ${{ github.event }}
+          echo "Shashank"
+          echo $LATEST_COMMIT
