@@ -21,4 +21,5 @@ jobs:
           echo $BEFORE_COMMIT
           echo $AFTER_COMMIT
           echo $SHA
+          echo $GITHUB_SHA
           
