@@ -13,7 +13,7 @@ jobs:
     env:
       BEFORE_COMMIT: ${{ github.event.before }}
       AFTER_COMMIT: ${{ github.event.after }}
-      SHA: ${{ github.event.sha }}
+      SHA: ${{ github.event.commits.sha }}
     steps:
       - name: Configure job for push to master
         run: |
