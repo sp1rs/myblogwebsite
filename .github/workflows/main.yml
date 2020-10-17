@@ -24,4 +24,7 @@ jobs:
           echo $AFTER_COMMIT
           echo $SHA
           echo $GITHUB_SHA
+          COMMIT=$(git rev-parse HEAD)
+          echo "::set-env name=COMMIT::$COMMIT"
+          echo "$COMMIT"
           
