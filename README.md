@@ -10,3 +10,5 @@ TEST 2
 print("COMMIT 1")
 
 print("COMMIT 2")
+
+print("FOLK COMMIT 1")
